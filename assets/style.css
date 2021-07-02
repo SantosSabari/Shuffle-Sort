@@ -1,0 +1,134 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.count {
+  color: red;
+}
+.page-wrapper {
+  display: flex;
+}
+
+.page-wrapper .right-panel {
+  width: 25%;
+  padding-top: 30px;
+}
+
+.page-wrapper .left-panel {
+  width: 75%;
+  padding: 0px 0px;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+.number-card {
+  height: 200px;
+  width: 150px;
+  flex: 0 0 33.333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.card-color1 {
+  background-color: #6f98a8;
+}
+.card-color2 {
+  background-color: #2b8ead;
+}
+.card-color3 {
+  background-color: #2f454e;
+}
+.card-color4 {
+  background-color: #bfbfbf;
+}
+.btn-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.btn {
+  background-color: #72c3dc;
+  border-radius: 7px;
+  box-shadow: 0px 3px 0px #2d8fae;
+  color: #fff;
+  text-transform: uppercase;
+  height: 44px;
+  min-width: 150px;
+  border: 0px;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 600px) {
+  .page-wrapper {
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  .left-panel {
+    order: 2;
+  }
+  .right-panel {
+    margin-bottom: 30px;
+  }
+  .left-panel,
+  .right-panel {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .number-card {
+    flex: 0 0 100%;
+    font-size: 24px;
+    height: 50px;
+    width: 100%;
+    background-color: #efefef;
+    margin-bottom: 8px;
+    color: #333333;
+    position: relative;
+  }
+  .btn.shuffle {
+    min-width: 110px;
+    margin-right: 12px;
+  }
+  .btn.sort {
+    min-width: 110px;
+    margin-left: 12px;
+  }
+  .number-card.card-color1:after,
+  .number-card.card-color2:after,
+  .number-card.card-color3:after,
+  .number-card.card-color4:after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .number-card.card-color1:after {
+    background-color: #6798a8;
+  }
+  .number-card.card-color2:after {
+    background-color: #2b8ead;
+  }
+  .number-card.card-color3:after {
+    background-color: #2f454e;
+  }
+  .number-card.card-color4:after {
+    background-color: #bfbfbf;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .page-wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 0px;
+  }
+}
